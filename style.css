@@ -1,0 +1,523 @@
+/* impeor section  */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Righteous&display=swap');
+ /*font-family: 'Righteous', cursive; */
+ @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baloo+Da+2&display=swap');
+ /* font-family: 'Baloo Da 2', cursive; */
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+ /* font-family: 'Kanit', sans-serif; */
+ @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+ /* font-family: 'Kanit', sans-serif; */
+
+
+
+
+/* hole site common think section  */
+body{
+    background-color: rgb(40, 37, 61);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contaner{
+    border: 2px solid rgb(29, 94, 124);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* animation makeing section  */
+@keyframes nav{
+    0%{
+        position: absolute;
+        top: -100%;
+    }
+    100%{
+        position: absolute;
+        top: 0px;
+    }
+}
+/* nav section  */
+header{
+    position: sticky;
+}
+#nav{
+    /* animation: nav 1s none; */
+    background-color: rgb(70, 178, 221);
+    padding: 10px;
+    margin: 10px;
+    display:flex;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    border-radius: 5px;
+}
+.navitems{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 20px;
+}
+#logo img{
+    position: absolute;
+    left: 36px;
+    top: 15px;
+    height: 70px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.navitems li{
+    list-style: none;
+    margin: 10px;
+}
+.navitems li a{
+    transition: 0.7s ease;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Righteous';
+    margin: 3px;
+    padding: 5px 8px 5px 8px;
+    border: 2px solid rgba(255, 0, 0, 0);
+    border-radius: 5px;
+}
+.navitems li a:hover{
+    color: rgb(120, 209, 209);
+    border: 2px solid rgb(0, 174, 255);
+}
+.hambarger{
+    position: fixed;
+    right: 40px;
+    top: 42px;
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+-webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+}
+/* Midea Quare section  */
+
+@media (max-width:730px){
+    .hambarger{
+        display: block;
+    }
+    .hambarger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hambarger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hambarger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    #nav{
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .navitems li{
+        margin: 50px;
+    }
+    .navitems{
+        margin-top: -20px;
+        border-radius: 5px;
+        align-items: center;
+        background-color: rgba(6, 10, 70, 0.733);
+        left: -100%;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        transition: 0.3s ease;
+    }
+    .navitems.active{
+        left: 0;
+    }
+    .navitems li a{
+        letter-spacing: 2px;
+        font-size: 30px;
+    }
+}
+ 
+/* Home section  */
+.s{
+    margin: 10px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.s h1{
+    letter-spacing: 2px;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    color: rgb(238, 4, 4);
+    font-size: 40px;
+    margin: 10px;
+}
+.s h3{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(58, 155, 240);
+    margin: 10px;
+}
+.s img{
+    height: 420px;
+    margin: 10px;
+    border-radius: 5px;
+}
+#hc{
+    width: auto;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+}
+#hcc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    border:none;
+    width: auto;
+
+}
+#hcc h3{
+    font-family: 'Kanit', sans-serif;
+    font-size: 50px;
+    color: rgb(93, 179, 236);
+    text-align: center;
+}
+#hcc h4{
+    font-size: 25px;
+    text-align: center;
+    color: rgb(255, 85, 0);
+}
+#hcc p{
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: aliceblue;
+}
+#hcc a{
+    font-family: 'Kanit', sans-serif;
+    font-size: 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(139, 239, 248);
+    font-weight: bold;
+}
+#hcc a:hover{
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+#gl{
+    justify-content: center;
+    border: 2px solid rgb(0, 162, 255);
+    margin: 40px 10px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#gl h1{
+    font-size: 60px;
+    margin: none;
+}
+#gl h2{
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    font-size: 50px;
+}
+#gl p{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#gl img{
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+#gl a{
+    background-color: rgb(0, 217, 255);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    margin: 10px;
+}
+#gl a:hover{
+    background-color: rgb(12, 80, 107);
+    color: rgb(255, 255, 255);
+}
+
+
+/* Midea Quare section  */
+
+@media (max-width:780px) {
+    #hc {
+        width: auto;
+        flex-direction: column;
+    }
+    #hcc{
+        width: auto;
+    }
+    #hc img{
+        height: 360px;
+    }
+    .navitems li a{
+        margin: 0;
+        font-size: 20px;
+    }
+}
+@media (max-width:425px){
+
+    .s h1{
+        font-size:30px;
+    }
+    .s h3{
+        font-size: 30px;
+    }
+    #hcc h4{
+        font-size: 30px;
+    }
+    #hcc h3{
+        font-size: 40px;
+    }
+    .s img{
+        height: 300px;
+        margin: none;
+    }
+    #hcc {
+        padding: 5px;
+    }
+    #hcc a{
+        font-size: 15px;
+    }
+}
+@media (max-width:390px){
+    .s h3{
+        font-size: 20px;
+    }
+    #hcc h4{
+        font-size: 20px;
+    }
+    #hcc h3{
+        font-size: 25px;
+    }
+}
+/* servises section */
+.serveses{
+    padding: 10px;
+}
+.serveses h2{
+    letter-spacing: 2px;
+    font-family: 'Righteous', cursive;
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+.s-box{
+
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid rgb(13, 217, 253);
+}
+@media (max-width:850px){
+    .box{
+        width: 40%;
+    }
+}
+@media (max-width:580px){
+    .box{
+        width: auto;
+    }
+}
+@media (max-width:310px){
+    #nav{
+        width: 288px;
+    }
+}
+.box h3{
+    letter-spacing: 1px;
+    font-family: 'Kanit', sans-serif;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+.box p{
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 5px;
+    color: white;
+    text-align: center;
+}
+.box a{
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(33, 107, 126);
+    padding: 5px;
+    border-radius: 5px;
+}
+.box a:hover{
+    background-color: rgb(107, 223, 217);
+    color: black;
+}
+
+/* Contacet section */
+.cbox{
+    border: 2px solid rgb(0, 225, 255);
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+#f h2{ 
+    color: white;
+    font-size: 30px;
+    background-color: rgb(0, 109, 252);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#f h1{
+    color: aliceblue;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+#f p{
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#f a{
+    color: rgb(0, 0, 0);
+    background-color: rgb(10, 115, 206);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 25px;
+}
+#f a:hover{
+    background-color: rgb(8, 185, 255);
+    color: rgb(0, 0, 0);
+}
+
+#w h2{
+    background-color: rgb(74, 175, 79);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+#w h3{
+    color: rgb(150, 204, 211);
+    font-size: 30px;
+}
+.n {
+    color: rgb(0, 0, 0);
+    background-color: green;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.cp{
+    color: white;
+    font-size: 20px;
+}
+#p h2{
+    color: white;
+    background-color: rgb(221, 90, 90);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+#p h3{
+    color: rgb(62, 162, 255);
+    font-size: 30px;
+}
+#op {
+    background-color: rgb(221, 90, 90);
+}
+#g h2 {
+    color: black;
+    background-color: rgb(208, 228, 138);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+
+}
+#g h3{
+    color: white;
+}
+/* About us section  */
+#about h1{
+    color: rgb(241, 8, 8);
+    font-size: 45px;
+}
+#about h3{
+    color: rgb(29, 210, 223);
+    font-size: 20px;
+}
+#about p{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+#about a{
+    color: white;
+    background-color: rgb(165, 54, 54);
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 5px;
+    margin: 10px;
+}
